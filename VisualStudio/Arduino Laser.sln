@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arduino Laser", "Arduino Laser\Arduino Laser.csproj", "{DB1D5778-8A06-4D29-B638-19E6672381DE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Laser_Gate", "Y:\Projects\ArduinoLaser\Laser_Gate\Laser_Gate.vcxproj", "{C5F80730-F44F-4478-BDAE-6634EFC2CA88}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F2CFE024-AEC9-4A58-A8F5-C9B1491AF7D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB1D5778-8A06-4D29-B638-19E6672381DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB1D5778-8A06-4D29-B638-19E6672381DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB1D5778-8A06-4D29-B638-19E6672381DE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DB1D5778-8A06-4D29-B638-19E6672381DE}.Debug|x86.Build.0 = Debug|Any CPU
+		{DB1D5778-8A06-4D29-B638-19E6672381DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB1D5778-8A06-4D29-B638-19E6672381DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB1D5778-8A06-4D29-B638-19E6672381DE}.Release|x86.ActiveCfg = Release|Any CPU
+		{DB1D5778-8A06-4D29-B638-19E6672381DE}.Release|x86.Build.0 = Release|Any CPU
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.ActiveCfg = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.Build.0 = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|Any CPU.ActiveCfg = Release|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.ActiveCfg = Release|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5DEDE3A-D627-4DB4-A77A-0134F543A288}
+	EndGlobalSection
+EndGlobal

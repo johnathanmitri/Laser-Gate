@@ -1,0 +1,28 @@
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Release\Arduino_Laser.Form1.resources
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Release\Arduino_Laser.Properties.Resources.resources
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Release\Arduino Laser.csproj.GenerateResource.cache
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Release\Arduino Laser.csproj.CoreCompileInputs.cache
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Release\Arduino Laser.csprojAssemblyReference.cache
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Release\Arduino Laser.csprojAssemblyReference.cache
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Release\Arduino_Laser.Form1.resources
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Release\Arduino_Laser.Properties.Resources.resources
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Release\Arduino Laser.csproj.GenerateResource.cache
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Release\Arduino Laser.csproj.CoreCompileInputs.cache
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Release\Laser Gate.exe.config
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Release\Laser Gate.exe.manifest
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Release\Laser Gate.application
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Release\Laser Gate.exe
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Release\Laser Gate.pdb
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Release\Laser Gate.exe.manifest
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Release\Laser Gate.application
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Release\Laser Gate.exe
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Release\Laser Gate.pdb
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Release\Laser Gate.exe.config
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Release\Laser Gate.exe.manifest
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Release\Laser Gate.application
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Release\Laser Gate.exe
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Release\Laser Gate.pdb
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Release\Laser Gate.exe.manifest
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Release\Laser Gate.application
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Release\Laser Gate.exe
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Release\Laser Gate.pdb

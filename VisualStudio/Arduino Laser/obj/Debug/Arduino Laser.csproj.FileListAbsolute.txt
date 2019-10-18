@@ -1,0 +1,52 @@
+C:\Users\Johnathan\source\repos\Arduino Laser\Arduino Laser\bin\Debug\Arduino Laser.exe.config
+C:\Users\Johnathan\source\repos\Arduino Laser\Arduino Laser\bin\Debug\Arduino Laser.exe
+C:\Users\Johnathan\source\repos\Arduino Laser\Arduino Laser\bin\Debug\Arduino Laser.pdb
+C:\Users\Johnathan\source\repos\Arduino Laser\Arduino Laser\obj\Debug\Arduino Laser.csprojAssemblyReference.cache
+C:\Users\Johnathan\source\repos\Arduino Laser\Arduino Laser\obj\Debug\Arduino_Laser.Form1.resources
+C:\Users\Johnathan\source\repos\Arduino Laser\Arduino Laser\obj\Debug\Arduino_Laser.Properties.Resources.resources
+C:\Users\Johnathan\source\repos\Arduino Laser\Arduino Laser\obj\Debug\Arduino Laser.csproj.GenerateResource.cache
+C:\Users\Johnathan\source\repos\Arduino Laser\Arduino Laser\obj\Debug\Arduino Laser.csproj.CoreCompileInputs.cache
+C:\Users\Johnathan\source\repos\Arduino Laser\Arduino Laser\obj\Debug\Arduino Laser.exe
+C:\Users\Johnathan\source\repos\Arduino Laser\Arduino Laser\obj\Debug\Arduino Laser.pdb
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Debug\Arduino_Laser.Form1.resources
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Debug\Arduino_Laser.Properties.Resources.resources
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Debug\Arduino Laser.csproj.GenerateResource.cache
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Debug\Arduino Laser.csproj.CoreCompileInputs.cache
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Debug\Laser Gate.exe.config
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Debug\Laser Gate.exe.manifest
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Debug\Laser Gate.application
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Debug\Laser Gate.exe
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Debug\Laser Gate.pdb
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Debug\Arduino Laser.csprojAssemblyReference.cache
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Debug\Arduino_Laser.Form1.resources
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Debug\Arduino_Laser.Properties.Resources.resources
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Debug\Arduino Laser.csproj.GenerateResource.cache
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Debug\Arduino Laser.csproj.CoreCompileInputs.cache
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Debug\Laser Gate.exe.manifest
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Debug\Laser Gate.application
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Debug\Laser Gate.exe
+D:\SharedFolder\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Debug\Laser Gate.pdb
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Debug\Laser Gate.exe.config
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Debug\Laser Gate.exe.manifest
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Debug\Laser Gate.application
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Debug\Laser Gate.exe
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Debug\Laser Gate.pdb
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Debug\Laser Gate.exe.manifest
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Debug\Laser Gate.application
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Debug\Laser Gate.exe
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Debug\Laser Gate.pdb
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Debug\Microsoft.Threading.Tasks.dll
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Debug\System.IO.dll
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Debug\System.Runtime.dll
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Debug\System.Threading.Tasks.dll
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Debug\Microsoft.Threading.Tasks.xml
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Debug\System.IO.xml
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Debug\System.Runtime.xml
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\bin\Debug\System.Threading.Tasks.xml
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Debug\Arduino Laser.csproj.App.config
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Debug\Arduino Laser.csprojAssemblyReference.cache
+Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Debug\Arduino Laser.csproj.CopyComplete
