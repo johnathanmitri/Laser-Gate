@@ -26,3 +26,31 @@ Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Release\Laser Gate.exe.m
 Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Release\Laser Gate.application
 Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Release\Laser Gate.exe
 Y:\Projects\ArduinoLaser\VisualStudio\Arduino Laser\obj\Release\Laser Gate.pdb
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\bin\Release\Laser Gate.exe.config
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\bin\Release\Laser Gate.exe.manifest
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\bin\Release\Laser Gate.application
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\bin\Release\Laser Gate.exe
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\bin\Release\Laser Gate.pdb
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\bin\Release\Microsoft.Threading.Tasks.dll
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\bin\Release\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\bin\Release\Microsoft.Threading.Tasks.Extensions.dll
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\bin\Release\System.IO.dll
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\bin\Release\System.Runtime.dll
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\bin\Release\System.Threading.Tasks.dll
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\bin\Release\Microsoft.Threading.Tasks.xml
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\bin\Release\Microsoft.Threading.Tasks.Extensions.xml
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\bin\Release\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\bin\Release\System.IO.xml
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\bin\Release\System.Runtime.xml
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\bin\Release\System.Threading.Tasks.xml
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\obj\Release\Arduino Laser.csproj.App.config
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\obj\Release\Arduino Laser.csprojAssemblyReference.cache
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\obj\Release\Arduino_Laser.Form1.resources
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\obj\Release\Arduino_Laser.Properties.Resources.resources
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\obj\Release\Arduino Laser.csproj.GenerateResource.cache
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\obj\Release\Arduino Laser.csproj.CoreCompileInputs.cache
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\obj\Release\Laser Gate.exe.manifest
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\obj\Release\Laser Gate.application
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\obj\Release\Arduino Laser.csproj.CopyComplete
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\obj\Release\Laser Gate.exe
+D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\obj\Release\Laser Gate.pdb
