@@ -163,7 +163,7 @@ namespace Arduino_Laser
 
             dataGridView.Invoke(new MethodInvoker(() =>   //THIS IS REALLY REALY SLOW FIX IT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             {
-                dataGridView.Rows.Add(Trials + 1, (time / 1000).ToString("N3"), blockageTimeSeconds/*.ToString("N3")*/, MS.ToString("N3"), MPH.ToString("N3"));
+                dataGridView.Rows.Add(Trials + 1, (time / 1000).ToString("N3"), blockageTimeSeconds.ToString("N4"), MS.ToString("N3"), MPH.ToString("N3"));
                 dataGridView.FirstDisplayedScrollingRowIndex = Trials;
             }));
 
