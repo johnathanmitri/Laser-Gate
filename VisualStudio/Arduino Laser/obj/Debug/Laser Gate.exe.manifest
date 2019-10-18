@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Laser Gate.exe" size="129568">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Laser Gate.exe" size="130080">
       <assemblyIdentity name="Laser Gate" version="1.0.0.0" publicKeyToken="C1633099774ED2A0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>QIWO8oMEhcTvlai84zXphmnzMbg=</dsig:DigestValue>
+        <dsig:DigestValue>hn6B0MYrm93Ea6OUuHTQjLSrXSY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

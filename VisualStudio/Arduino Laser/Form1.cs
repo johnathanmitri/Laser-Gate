@@ -37,6 +37,8 @@ namespace Arduino_Laser
             dataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(64, 70, 78);
             dataGridView.Controls[0].BackColor = Color.FromArgb(64, 70, 78);
             this.MaximizeBox = false;
+
+            port = new SerialPort();
             //Form1.CheckForIllegalCrossThreadCalls = false;
             /*source.Columns.Add();
             source.Columns.Add();
@@ -46,10 +48,11 @@ namespace Arduino_Laser
             dataGridView.DataSource = source;
             //source.TableNewRow += Source_TableNewRow;*/
             //dataGridView
-            /*-----------------DELETE ME LATER!!!--------------*/  tbPort.Text = "COM3"; // DELETE ME----------------------------------------------
+            
+            //tbPort.Text = "COM3"; // DELETE ME----------------------------------------------
         }
 
-       
+
 
         int init()
         {
@@ -60,51 +63,61 @@ namespace Arduino_Laser
                     string[] ports = SerialPort.GetPortNames();
                     foreach (string portStr in ports)
                     {
-                        port = new SerialPort();
                         port.NewLine = "z";
                         port.BaudRate = 57600;
                         port.PortName = portStr;
                         port.Open();
                         port.Write("yo");
                         port.ReadTimeout = 1500;
-                        string lol = port.ReadLine();
+                        string lol = "";
+                        try
+                        {
+                            lol = port.ReadLine();
+                        }
+                        catch { port.Close(); continue; }
                         if (lol == "sup")
                         {
                             port.DataReceived += new SerialDataReceivedEventHandler(dataRecieved);
                             port.ReadTimeout = -1;
                             return 1;
                         }
+                        port.Close();
                     }
                 }
-                catch (Exception y) { }
+                catch (Exception y) {port.Close();}
             }
             else
             {
                 try
                 {
-                    port = new SerialPort();
                     port.NewLine = "z";
                     port.BaudRate = 57600;
                     port.PortName = tbPort.Text;
                     port.Open();
                     port.ReadTimeout = 1500;
                     port.Write("yo");
-                    string lol = port.ReadLine();
+                    string lol = "";
+                    try
+                    {
+                        lol = port.ReadLine();
+                    }
+                    catch { port.Close(); }
                     if (lol == "sup")
                     {
                         port.DataReceived += new SerialDataReceivedEventHandler(dataRecieved);
                         port.ReadTimeout = -1;
                         return 1;
                     }
+                    port.Close();
                 }
-                catch (Exception y) { }
+                catch (Exception y) {port.Close();}
             }
             return 0;
         }
 
         private void dataRecieved(object sender, SerialDataReceivedEventArgs e)
         {
-            
+
             if (Paused)
             {
                 port.ReadExisting();
@@ -123,7 +136,7 @@ namespace Arduino_Laser
                 time = sw.ElapsedMilliseconds;
             }
             byte[] buffer = new byte[4];  // { 1, 0, 0, 0};
-//UInt32 bl0ckageTime = BitConverter.ToUInt32(buffer, 0);
+                                          //UInt32 bl0ckageTime = BitConverter.ToUInt32(buffer, 0);
             port.Read(buffer, 0, 4);
             UInt32 blockageTime = BitConverter.ToUInt32(buffer, 0);
             double blockageTimeSeconds = (double)blockageTime / 1000000;
@@ -148,7 +161,7 @@ namespace Arduino_Laser
             //    dataGridView.FirstDisplayedScrollingRowIndex = Trials;
             //}));
 
-            dataGridView.Invoke( new MethodInvoker(() =>   //THIS IS REALLY REALY SLOW FIX IT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            dataGridView.Invoke(new MethodInvoker(() =>   //THIS IS REALLY REALY SLOW FIX IT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             {
                 dataGridView.Rows.Add(Trials + 1, (time / 1000).ToString("N3"), blockageTimeSeconds/*.ToString("N3")*/, MS.ToString("N3"), MPH.ToString("N3"));
                 dataGridView.FirstDisplayedScrollingRowIndex = Trials;
@@ -161,7 +174,7 @@ namespace Arduino_Laser
 
         }
 
-        
+
 
         private void btnInit_Click(object sender, EventArgs e)
         {
@@ -222,7 +235,7 @@ namespace Arduino_Laser
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(port.BytesToRead.ToString());
+            //MessageBox.Show(port.BytesToRead.ToString());
         }
 
         private void numBlockageLength_ValueChanged(object sender, EventArgs e)
