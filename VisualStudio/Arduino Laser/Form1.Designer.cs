@@ -40,6 +40,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.Trial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Seconds = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MPH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numBlockageLength = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.lblComPort = new System.Windows.Forms.Label();
@@ -53,11 +58,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.btnTest = new System.Windows.Forms.Button();
-            this.Trial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seconds = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MPH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBlockageLength)).BeginInit();
             this.SuspendLayout();
@@ -187,6 +188,40 @@
             this.dataGridView.Size = new System.Drawing.Size(918, 560);
             this.dataGridView.TabIndex = 11;
             this.dataGridView.TabStop = false;
+            // 
+            // Trial
+            // 
+            this.Trial.HeaderText = "Trial";
+            this.Trial.Name = "Trial";
+            this.Trial.ReadOnly = true;
+            // 
+            // Time
+            // 
+            this.Time.HeaderText = "Time";
+            this.Time.Name = "Time";
+            this.Time.ReadOnly = true;
+            this.Time.Width = 200;
+            // 
+            // Seconds
+            // 
+            this.Seconds.HeaderText = "Seconds";
+            this.Seconds.Name = "Seconds";
+            this.Seconds.ReadOnly = true;
+            this.Seconds.Width = 200;
+            // 
+            // MS
+            // 
+            this.MS.HeaderText = "M/S";
+            this.MS.Name = "MS";
+            this.MS.ReadOnly = true;
+            this.MS.Width = 200;
+            // 
+            // MPH
+            // 
+            this.MPH.HeaderText = "MPH";
+            this.MPH.Name = "MPH";
+            this.MPH.ReadOnly = true;
+            this.MPH.Width = 200;
             // 
             // numBlockageLength
             // 
@@ -349,39 +384,10 @@
             this.btnTest.Visible = false;
             this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
-            // Trial
+            // backgroundWorker1
             // 
-            this.Trial.HeaderText = "Trial";
-            this.Trial.Name = "Trial";
-            this.Trial.ReadOnly = true;
-            // 
-            // Time
-            // 
-            this.Time.HeaderText = "Time";
-            this.Time.Name = "Time";
-            this.Time.ReadOnly = true;
-            this.Time.Width = 200;
-            // 
-            // Seconds
-            // 
-            this.Seconds.HeaderText = "Seconds";
-            this.Seconds.Name = "Seconds";
-            this.Seconds.ReadOnly = true;
-            this.Seconds.Width = 200;
-            // 
-            // MS
-            // 
-            this.MS.HeaderText = "M/S";
-            this.MS.Name = "MS";
-            this.MS.ReadOnly = true;
-            this.MS.Width = 200;
-            // 
-            // MPH
-            // 
-            this.MPH.HeaderText = "MPH";
-            this.MPH.Name = "MPH";
-            this.MPH.ReadOnly = true;
-            this.MPH.Width = 200;
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             // 
             // Form1
             // 
@@ -449,6 +455,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Seconds;
         private System.Windows.Forms.DataGridViewTextBoxColumn MS;
         private System.Windows.Forms.DataGridViewTextBoxColumn MPH;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

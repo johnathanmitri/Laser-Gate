@@ -25,6 +25,8 @@ namespace Arduino_Laser
         UInt32 BaseTime;
         bool Paused = false;
         decimal BlockageLength = 10;
+
+
        
         public Form1()
         {
@@ -32,19 +34,9 @@ namespace Arduino_Laser
             dataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(64, 70, 78);
             dataGridView.Controls[0].BackColor = Color.FromArgb(64, 70, 78);
             this.MaximizeBox = false;
-
             port = new SerialPort();
-            //Form1.CheckForIllegalCrossThreadCalls = false;
-            /*source.Columns.Add();
-            source.Columns.Add();
-            source.Columns.Add();
-            source.Columns.Add();
-            source.Columns.Add();
-            dataGridView.DataSource = source;
-            //source.TableNewRow += Source_TableNewRow;*/
-            //dataGridView
-            
-            //tbPort.Text = "COM3"; // DELETE ME----------------------------------------------
+
+            backgroundWorker1.WorkerReportsProgress = true;
         }
 
 
@@ -72,7 +64,7 @@ namespace Arduino_Laser
                         catch { port.Close(); continue; }
                         if (lol == "sup")
                         {
-                            port.DataReceived += new SerialDataReceivedEventHandler(dataRecieved);
+                            backgroundWorker1.RunWorkerAsync();
                             port.ReadTimeout = -1;
                             return 1;
                         }
@@ -99,7 +91,7 @@ namespace Arduino_Laser
                     catch { port.Close(); }
                     if (lol == "sup")
                     {
-                        port.DataReceived += new SerialDataReceivedEventHandler(dataRecieved);
+                        backgroundWorker1.RunWorkerAsync();
                         port.ReadTimeout = -1;
                         return 1;
                     }
@@ -110,7 +102,73 @@ namespace Arduino_Laser
             return 0;
         }
 
-        private void dataRecieved(object sender, SerialDataReceivedEventArgs e)
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            while (true)
+            {
+                if (port.BytesToRead < 8)
+                {
+                    //Thread.Sleep(2);
+                    continue; //if we're not ready to read, we wait
+                }
+                if (Paused)
+                {
+                    byte[] dogshit = new byte[8];
+                    port.Read(dogshit, 0, 8);
+                    continue;
+                }
+                byte[] startBuffer = new byte[4];
+                byte[] endBuffer = new byte[4];  // { 1, 0, 0, 0};
+
+                port.Read(endBuffer, 0, 4); //run this one first, because end values come first
+                port.Read(startBuffer, 0, 4);
+
+                UInt32 startTime = BitConverter.ToUInt32(startBuffer, 0);
+                UInt32 endTime = BitConverter.ToUInt32(endBuffer, 0);
+
+                double time;
+                if (Trials == 0)
+                {
+                    time = 0;        //microseconds
+                    BaseTime = startTime;
+                }
+                else
+                {
+                    time = startTime - BaseTime;
+                }
+
+                UInt32 blockageTime = endTime - startTime;
+                double blockageTimeSeconds = (double)blockageTime / 1000000;
+                double MS = (((double)BlockageLength) / 1000) / blockageTimeSeconds;
+                double MPH = MS * 2.23694;
+
+                object[] newRow = new object[5] {Trials+1, (time / 1000000).ToString("N3"), blockageTimeSeconds.ToString("N4"), MS.ToString("N3"), MPH.ToString("N3")};
+                backgroundWorker1.ReportProgress(50, newRow);
+
+                /*dataGridView.Invoke(new MethodInvoker(() =>   //THIS IS REALLY REALY SLOW FIX IT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                {
+                    dataGridView.Rows.Add(Trials + 1, (time / 1000000).ToString("N3"), blockageTimeSeconds.ToString("N4"), MS.ToString("N3"), MPH.ToString("N3"));
+                    dataGridView.FirstDisplayedScrollingRowIndex = Trials;
+
+                }));*/
+
+                //MessageBox.Show((sw.ElapsedMilliseconds - test).ToString());
+
+                //source.Rows.Add(Trials + 1, time, blockageTimeSeconds.ToString("N3"), MS.ToString("N3"), MPH.ToString("N3"));
+                Trials++;
+
+            }
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            
+            dataGridView.Rows.Add((object[])e.UserState);
+            
+            dataGridView.FirstDisplayedScrollingRowIndex = (int)((object[])e.UserState)[0] - 1;
+        }
+
+        /*private void dataRecieved(object sender, SerialDataReceivedEventArgs e)
         {
             if (Paused)
             {
@@ -150,6 +208,7 @@ namespace Arduino_Laser
             {
                 dataGridView.Rows.Add(Trials + 1, (time / 1000000).ToString("N3"), blockageTimeSeconds.ToString("N4"), MS.ToString("N3"), MPH.ToString("N3"));
                 dataGridView.FirstDisplayedScrollingRowIndex = Trials;
+
             }));
 
             //MessageBox.Show((sw.ElapsedMilliseconds - test).ToString());
@@ -157,7 +216,8 @@ namespace Arduino_Laser
             //source.Rows.Add(Trials + 1, time, blockageTimeSeconds.ToString("N3"), MS.ToString("N3"), MPH.ToString("N3"));
             Trials++;
 
-        }
+        }*/
+
 
 
 
@@ -231,5 +291,6 @@ namespace Arduino_Laser
         {
             BlockageLength = numBlockageLength.Value;
         }
+
     }
 }
