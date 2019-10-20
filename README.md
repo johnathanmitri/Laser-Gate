@@ -1,2 +1,1 @@
-This is the version that was demonstrated to shhs teachers. Communicates using one 32 bit Unsigned long,
-containing how long the blockage was, and displays the 5 columns.
+This is the working version using integer pairs instead of single integers. 8 bytes are read per table entry. The first 4 bytes are the end of the blockage, and the last 4 are the beginning of the blockage.
