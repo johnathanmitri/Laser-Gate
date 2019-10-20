@@ -36,9 +36,9 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnInit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblSeconds = new System.Windows.Forms.Label();
+            this.lblMS = new System.Windows.Forms.Label();
+            this.lblMPH = new System.Windows.Forms.Label();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.Trial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,11 +54,12 @@
             this.lblConnected = new System.Windows.Forms.Label();
             this.lblAbout = new System.Windows.Forms.Label();
             this.btnPause = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblMM = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
             this.btnTest = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnApply = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numBlockageLength)).BeginInit();
             this.SuspendLayout();
@@ -97,44 +98,44 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
-            this.label1.Location = new System.Drawing.Point(44, 96);
+            this.label1.Location = new System.Drawing.Point(39, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 25);
             this.label1.TabIndex = 7;
             this.label1.Text = "Trial";
             // 
-            // label2
+            // lblSeconds
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
-            this.label2.Location = new System.Drawing.Point(354, 96);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 25);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Seconds";
+            this.lblSeconds.AutoSize = true;
+            this.lblSeconds.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeconds.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
+            this.lblSeconds.Location = new System.Drawing.Point(371, 96);
+            this.lblSeconds.Name = "lblSeconds";
+            this.lblSeconds.Size = new System.Drawing.Size(82, 25);
+            this.lblSeconds.TabIndex = 8;
+            this.lblSeconds.Text = "Seconds";
             // 
-            // label3
+            // lblMS
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
-            this.label3.Location = new System.Drawing.Point(569, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 25);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "M/S";
+            this.lblMS.AutoSize = true;
+            this.lblMS.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
+            this.lblMS.Location = new System.Drawing.Point(586, 96);
+            this.lblMS.Name = "lblMS";
+            this.lblMS.Size = new System.Drawing.Size(48, 25);
+            this.lblMS.TabIndex = 9;
+            this.lblMS.Text = "M/S";
             // 
-            // label4
+            // lblMPH
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
-            this.label4.Location = new System.Drawing.Point(768, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 25);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "MPH";
+            this.lblMPH.AutoSize = true;
+            this.lblMPH.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMPH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
+            this.lblMPH.Location = new System.Drawing.Point(783, 96);
+            this.lblMPH.Name = "lblMPH";
+            this.lblMPH.Size = new System.Drawing.Size(55, 25);
+            this.lblMPH.TabIndex = 10;
+            this.lblMPH.Text = "MPH";
             // 
             // dataGridView
             // 
@@ -343,16 +344,16 @@
             this.btnPause.UseVisualStyleBackColor = true;
             this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
             // 
-            // label6
+            // lblMM
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
-            this.label6.Location = new System.Drawing.Point(423, 21);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 19);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "MM";
+            this.lblMM.AutoSize = true;
+            this.lblMM.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.lblMM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
+            this.lblMM.Location = new System.Drawing.Point(423, 21);
+            this.lblMM.Name = "lblMM";
+            this.lblMM.Size = new System.Drawing.Size(35, 19);
+            this.lblMM.TabIndex = 24;
+            this.lblMM.Text = "MM";
             // 
             // panel1
             // 
@@ -361,21 +362,21 @@
             this.panel1.Size = new System.Drawing.Size(16, 25);
             this.panel1.TabIndex = 14;
             // 
-            // label7
+            // lblTime
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
-            this.label7.Location = new System.Drawing.Point(178, 96);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 25);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "Time";
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(201)))), ((int)(((byte)(242)))));
+            this.lblTime.Location = new System.Drawing.Point(185, 96);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(54, 25);
+            this.lblTime.TabIndex = 25;
+            this.lblTime.Text = "Time";
             // 
             // btnTest
             // 
             this.btnTest.ForeColor = System.Drawing.Color.Black;
-            this.btnTest.Location = new System.Drawing.Point(491, 39);
+            this.btnTest.Location = new System.Drawing.Point(726, 57);
             this.btnTest.Name = "btnTest";
             this.btnTest.Size = new System.Drawing.Size(75, 23);
             this.btnTest.TabIndex = 26;
@@ -389,15 +390,30 @@
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             // 
+            // btnApply
+            // 
+            this.btnApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApply.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.btnApply.Location = new System.Drawing.Point(464, 12);
+            this.btnApply.Name = "btnApply";
+            this.btnApply.Size = new System.Drawing.Size(73, 32);
+            this.btnApply.TabIndex = 27;
+            this.btnApply.TabStop = false;
+            this.btnApply.Text = "Apply";
+            this.btnApply.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(41)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(943, 698);
+            this.Controls.Add(this.btnApply);
             this.Controls.Add(this.btnTest);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblTime);
+            this.Controls.Add(this.lblMM);
             this.Controls.Add(this.btnPause);
             this.Controls.Add(this.lblConnected);
             this.Controls.Add(this.lblFailed);
@@ -408,9 +424,9 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.numBlockageLength);
             this.Controls.Add(this.dataGridView);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblMPH);
+            this.Controls.Add(this.lblMS);
+            this.Controls.Add(this.lblSeconds);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnInit);
             this.Controls.Add(this.btnClear);
@@ -433,9 +449,9 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnInit;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblSeconds;
+        private System.Windows.Forms.Label lblMS;
+        private System.Windows.Forms.Label lblMPH;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.NumericUpDown numBlockageLength;
         private System.Windows.Forms.Label label5;
@@ -446,9 +462,9 @@
         private System.Windows.Forms.Label lblConnected;
         private System.Windows.Forms.Label lblAbout;
         private System.Windows.Forms.Button btnPause;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblMM;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Button btnTest;
         private System.Windows.Forms.DataGridViewTextBoxColumn Trial;
         private System.Windows.Forms.DataGridViewTextBoxColumn Time;
@@ -456,6 +472,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MS;
         private System.Windows.Forms.DataGridViewTextBoxColumn MPH;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button btnApply;
     }
 }
 

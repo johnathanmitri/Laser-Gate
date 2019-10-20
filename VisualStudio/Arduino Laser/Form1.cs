@@ -106,17 +106,24 @@ namespace Arduino_Laser
         {
             while (true)
             {
+                while (Paused)
+                {
+                    if (port.BytesToRead > 7)
+                    {
+                        int size = 8 * (port.BytesToRead / 8); //this is to make sure not to offset the data, and only dump data in a multiple of 8. ie, if theres 17 bytes to be read, we dump 16
+                        byte[] dump = new byte[size];
+                        port.Read(dump, 0, size);
+                    }
+
+                    if (port.BytesToRead == 0)
+                        Thread.Sleep(1);                      //Processors are so fast that a 1 millesecond wait time is plenty to bring the usage down below 1%
+                }
                 if (port.BytesToRead < 8)
                 {
-                    //Thread.Sleep(2);
+                    Thread.Sleep(1);
                     continue; //if we're not ready to read, we wait
                 }
-                if (Paused)
-                {
-                    byte[] dogshit = new byte[8];
-                    port.Read(dogshit, 0, 8);
-                    continue;
-                }
+                
                 byte[] startBuffer = new byte[4];
                 byte[] endBuffer = new byte[4];  // { 1, 0, 0, 0};
 
@@ -145,16 +152,6 @@ namespace Arduino_Laser
                 object[] newRow = new object[5] {Trials+1, (time / 1000000).ToString("N3"), blockageTimeSeconds.ToString("N4"), MS.ToString("N3"), MPH.ToString("N3")};
                 backgroundWorker1.ReportProgress(50, newRow);
 
-                /*dataGridView.Invoke(new MethodInvoker(() =>   //THIS IS REALLY REALY SLOW FIX IT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                {
-                    dataGridView.Rows.Add(Trials + 1, (time / 1000000).ToString("N3"), blockageTimeSeconds.ToString("N4"), MS.ToString("N3"), MPH.ToString("N3"));
-                    dataGridView.FirstDisplayedScrollingRowIndex = Trials;
-
-                }));*/
-
-                //MessageBox.Show((sw.ElapsedMilliseconds - test).ToString());
-
-                //source.Rows.Add(Trials + 1, time, blockageTimeSeconds.ToString("N3"), MS.ToString("N3"), MPH.ToString("N3"));
                 Trials++;
 
             }
@@ -162,64 +159,14 @@ namespace Arduino_Laser
 
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            
-            dataGridView.Rows.Add((object[])e.UserState);
-            
-            dataGridView.FirstDisplayedScrollingRowIndex = (int)((object[])e.UserState)[0] - 1;
+            try
+            {
+                dataGridView.Rows.Add((object[])e.UserState);
+
+                dataGridView.FirstDisplayedScrollingRowIndex = (int)((object[])e.UserState)[0] - 1;
+            }
+            catch { };
         }
-
-        /*private void dataRecieved(object sender, SerialDataReceivedEventArgs e)
-        {
-            if (Paused)
-            {
-                byte[] dogshit = new byte [8];
-                port.Read(dogshit, 0, 8);
-                return;
-            }
-            byte[] startBuffer = new byte[4];
-            byte[] endBuffer = new byte[4];  // { 1, 0, 0, 0};
-                    
-            port.Read(endBuffer, 0, 4); //run this one first, because end values come first
-            port.Read(startBuffer, 0, 4);
-
-            UInt32 startTime = BitConverter.ToUInt32(startBuffer, 0);
-            UInt32 endTime = BitConverter.ToUInt32(endBuffer, 0);
-
-            
-
-            double time;
-            if (Trials == 0)
-            {
-                time = 0;        //microseconds
-                BaseTime = startTime;
-            }
-            else
-            {
-                time = startTime - BaseTime;
-            }
-
-            UInt32 blockageTime = endTime - startTime;
-            double blockageTimeSeconds = (double)blockageTime / 1000000;
-            double MS = (((double)BlockageLength) / 1000) / blockageTimeSeconds;
-            double MPH = MS * 2.23694;
-
-
-            dataGridView.Invoke(new MethodInvoker(() =>   //THIS IS REALLY REALY SLOW FIX IT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            {
-                dataGridView.Rows.Add(Trials + 1, (time / 1000000).ToString("N3"), blockageTimeSeconds.ToString("N4"), MS.ToString("N3"), MPH.ToString("N3"));
-                dataGridView.FirstDisplayedScrollingRowIndex = Trials;
-
-            }));
-
-            //MessageBox.Show((sw.ElapsedMilliseconds - test).ToString());
-
-            //source.Rows.Add(Trials + 1, time, blockageTimeSeconds.ToString("N3"), MS.ToString("N3"), MPH.ToString("N3"));
-            Trials++;
-
-        }*/
-
-
-
 
         private void btnInit_Click(object sender, EventArgs e)
         {
@@ -292,5 +239,9 @@ namespace Arduino_Laser
             BlockageLength = numBlockageLength.Value;
         }
 
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+            BlockageLength = numBlockageLength.Value;
+        }
     }
 }
