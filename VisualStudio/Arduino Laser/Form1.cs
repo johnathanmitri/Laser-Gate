@@ -22,15 +22,10 @@ namespace Arduino_Laser
     {
         SerialPort port;
         int Trials = 0;
-        double BaseTime;
+        UInt32 BaseTime;
         bool Paused = false;
         decimal BlockageLength = 10;
-        //DataTable source = new DataTable();
-        //int MyCount;
-
-        Stopwatch sw;
-
-
+       
         public Form1()
         {
             InitializeComponent();
@@ -117,53 +112,43 @@ namespace Arduino_Laser
 
         private void dataRecieved(object sender, SerialDataReceivedEventArgs e)
         {
-
             if (Paused)
             {
-                port.ReadExisting();
+                byte[] dogshit = new byte [8];
+                port.Read(dogshit, 0, 8);
                 return;
             }
+            byte[] startBuffer = new byte[4];
+            byte[] endBuffer = new byte[4];  // { 1, 0, 0, 0};
+                    
+            port.Read(endBuffer, 0, 4); //run this one first, because end values come first
+            port.Read(startBuffer, 0, 4);
+
+            UInt32 startTime = BitConverter.ToUInt32(startBuffer, 0);
+            UInt32 endTime = BitConverter.ToUInt32(endBuffer, 0);
+
+            
 
             double time;
             if (Trials == 0)
             {
-                sw = new Stopwatch();
-                sw.Start();
-                time = 0;
+                time = 0;        //microseconds
+                BaseTime = startTime;
             }
             else
             {
-                time = sw.ElapsedMilliseconds;
+                time = startTime - BaseTime;
             }
-            byte[] buffer = new byte[4];  // { 1, 0, 0, 0};
-                                          //UInt32 bl0ckageTime = BitConverter.ToUInt32(buffer, 0);
-            port.Read(buffer, 0, 4);
-            UInt32 blockageTime = BitConverter.ToUInt32(buffer, 0);
+
+            UInt32 blockageTime = endTime - startTime;
             double blockageTimeSeconds = (double)blockageTime / 1000000;
             double MS = (((double)BlockageLength) / 1000) / blockageTimeSeconds;
             double MPH = MS * 2.23694;
 
-            /*MyCount++;
-            if (MyCount == 200)
-            {
-                MyCount = 200;
-            }*/
-            //long test = sw.ElapsedMilliseconds;
-
-            /*string a = (Trials + 1).ToString();
-            string b = time.ToString();
-            string c = blockageTimeSeconds.ToString("N3");
-            string d = MS.ToString("N3");
-            string f = MPH.ToString("N3");*/
-            //Invoke((MethodInvoker)(() =>   //THIS IS REALLY REALY SLOW FIX IT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            //{
-            //    dataGridView.Rows.Add(Trials + 1, (time / 1000).ToString("N3"), blockageTimeSeconds/*.ToString("N3")*/, MS.ToString("N3"), MPH.ToString("N3"));
-            //    dataGridView.FirstDisplayedScrollingRowIndex = Trials;
-            //}));
 
             dataGridView.Invoke(new MethodInvoker(() =>   //THIS IS REALLY REALY SLOW FIX IT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             {
-                dataGridView.Rows.Add(Trials + 1, (time / 1000).ToString("N3"), blockageTimeSeconds.ToString("N4"), MS.ToString("N3"), MPH.ToString("N3"));
+                dataGridView.Rows.Add(Trials + 1, (time / 1000000).ToString("N3"), blockageTimeSeconds.ToString("N4"), MS.ToString("N3"), MPH.ToString("N3"));
                 dataGridView.FirstDisplayedScrollingRowIndex = Trials;
             }));
 
@@ -202,9 +187,13 @@ namespace Arduino_Laser
         {
             dataGridView.Rows.Clear();
             Trials = 0;
-            port.ReadExisting();
-            if (sw != null)
-                sw.Stop();
+            if (port.BytesToRead > 7)
+            {
+                int size = 8*(port.BytesToRead / 8); //this is to make sure not to offset the data, and only dump data in a multiple of 8. ie, if theres 17 bytes to be read, we dump 16
+                byte[] dump = new byte[size];
+                port.Read(dump, 0, size);
+            }
+            
         }
 
         private void lblAbout_Click(object sender, EventArgs e)
@@ -214,7 +203,7 @@ namespace Arduino_Laser
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (port != null && port.IsOpen)
+            if (port != null && port.IsOpen)   //to avoid any errors. without it we error.
                 port.Write("bye");
         }
 
@@ -235,7 +224,7 @@ namespace Arduino_Laser
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(port.BytesToRead.ToString());
+            MessageBox.Show(port.BytesToRead.ToString());
         }
 
         private void numBlockageLength_ValueChanged(object sender, EventArgs e)
