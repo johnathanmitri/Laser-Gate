@@ -1,1 +1,12 @@
-This is the working version using integer pairs instead of single integers. 8 bytes are read per table entry. The first 4 bytes are the end of the blockage, and the last 4 are the beginning of the blockage.
+# Laser Speed Detector
+
+Measures the speed of objects passing through the laser beam, given their length. 
+
+Built with a laser diode, photo resistor, and Arduino Nano. 
+
+User interface is written in C# as a .NET Windows Forms app.
+
+https://github.com/johnathanmitri/Laser-Gate/assets/28831749/d2d0983e-26d8-4bc7-9b03-4cdd6583e771
+
+UI Screenshot: 
+![image](https://github.com/johnathanmitri/Laser-Gate/assets/28831749/64069bfb-3532-4dd9-8db1-28361b3f8841)
