@@ -78,3 +78,26 @@ D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\
 D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\obj\Debug\Arduino Laser.csproj.CopyComplete
 D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\obj\Debug\Laser Gate.exe
 D:\SharedFolder\Projects\ArduinoLaser\Git\Laser-Gate\VisualStudio\Arduino Laser\obj\Debug\Laser Gate.pdb
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\obj\Debug\Arduino Laser.csproj.AssemblyReference.cache
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\obj\Debug\Arduino Laser.csproj.SuggestedBindingRedirects.cache
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\obj\Debug\Laser Gate.exe.config
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\obj\Debug\Arduino_Laser.Form1.resources
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\obj\Debug\Arduino_Laser.Properties.Resources.resources
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\obj\Debug\Arduino Laser.csproj.GenerateResource.cache
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\obj\Debug\Laser Gate.exe
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\obj\Debug\Laser Gate.pdb
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\bin\Debug\Laser Gate.exe.config
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\bin\Debug\Laser Gate.exe.manifest
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\bin\Debug\Laser Gate.application
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\bin\Debug\Laser Gate.exe
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\bin\Debug\Laser Gate.pdb
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\bin\Debug\Microsoft.Threading.Tasks.dll
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\bin\Debug\Microsoft.Threading.Tasks.xml
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\obj\Debug\Arduino Laser.csproj.CoreCompileInputs.cache
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\obj\Debug\Laser Gate.exe.manifest
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\obj\Debug\Laser Gate.application
+D:\Johnathan\Documents\GitHub\Laser-Gate\VisualStudio\Arduino Laser\obj\Debug\Arduino Laser.csproj.CopyComplete

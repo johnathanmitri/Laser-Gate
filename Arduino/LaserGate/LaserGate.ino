@@ -1,4 +1,4 @@
-int Thresh = 130; //originally 130
+int Thresh = 700; //originally 130
 unsigned long startTime;
 unsigned long endTime;
 unsigned long blockageTime;
@@ -9,7 +9,7 @@ String msg;
 void setup()
 {
   Serial.begin(57600);
-  pinMode(A4, INPUT);
+  pinMode(A3, INPUT);
   pinMode(13, OUTPUT);
   digitalWrite(13, HIGH);
 }
@@ -18,17 +18,20 @@ void loop()
 {
   while (Serial.available() == 0)
   {
+    delay(10);
   }
-  Serial.readString(); //received 'yo'
+  Serial.readString(); //received 'hi'
 
   digitalWrite(13, LOW);
-  Serial.print("supz");
+  Serial.print("helloz");
   delay(20);
 
   while (Serial.available() == 0)
   {
-    while (analogRead(A4) >= Thresh) //&& (Serial.available() == 0))
-    { if (Serial.available() != 0)
+    while (analogRead(A3) >= Thresh) //&& (Serial.available() == 0))
+    { 
+      //Serial.println(analogRead(A3));
+      if (Serial.available() != 0)
         goto JustOutsideOfLoop;
     }
 
@@ -36,14 +39,16 @@ void loop()
     startTime = micros();
     digitalWrite(13, LOW);
 
-    while (analogRead(A4) <= Thresh) //&& (Serial.available() == 0))
-    { if (Serial.available() != 0)
+    while (analogRead(A3) <= Thresh) //&& (Serial.available() == 0))
+    {
+      //Serial.println(analogRead(A3));
+       if (Serial.available() != 0)
         goto JustOutsideOfLoop;
     }
 
     //=== At this point, laser is visible again.
     digitalWrite(13, HIGH);
-    endTime = micros();   //i would combine this, but its  buggy, so leave as is.
+    endTime = micros(); 
 
     for (int i = 0; i < 4; i++)
     { 
@@ -54,7 +59,7 @@ void loop()
       endTime >>= 8;
     }
 
-    Serial.write(endByteArray, 4);     //a slight obfuscation here by sending the end value first.
+    Serial.write(endByteArray, 4);    
     Serial.write(startByteArray, 4);   
   }
 

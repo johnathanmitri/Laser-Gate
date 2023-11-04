@@ -50,19 +50,20 @@ namespace Arduino_Laser
                     string[] ports = SerialPort.GetPortNames();
                     foreach (string portStr in ports)
                     {
-                        port.NewLine = "z";
-                        port.BaudRate = 57600;
-                        port.PortName = portStr;
-                        port.Open();
-                        port.Write("yo");
-                        port.ReadTimeout = 1500;
-                        string lol = "";
+                        // handshake with arduino
+                        string msg = "";
                         try
                         {
-                            lol = port.ReadLine();
+                            port.NewLine = "z";
+                            port.BaudRate = 57600;
+                            port.PortName = portStr;
+                            port.Open();
+                            port.ReadTimeout = 1500;
+                            port.Write("hi");
+                            msg = port.ReadLine();
                         }
                         catch { port.Close(); continue; }
-                        if (lol == "sup")
+                        if (msg == "hello")
                         {
                             backgroundWorker1.RunWorkerAsync();
                             port.ReadTimeout = -1;
@@ -77,19 +78,20 @@ namespace Arduino_Laser
             {
                 try
                 {
-                    port.NewLine = "z";
-                    port.BaudRate = 57600;
-                    port.PortName = tbPort.Text;
-                    port.Open();
-                    port.ReadTimeout = 1500;
-                    port.Write("yo");
-                    string lol = "";
+                    // handshake with arduino
+                    string msg = "";
                     try
                     {
-                        lol = port.ReadLine();
+                        port.NewLine = "z";
+                        port.BaudRate = 57600;
+                        port.PortName = tbPort.Text;
+                        port.Open();
+                        port.ReadTimeout = 1500;
+                        port.Write("hi");
+                        msg = port.ReadLine();
                     }
                     catch { port.Close(); }
-                    if (lol == "sup")
+                    if (msg == "hello")
                     {
                         backgroundWorker1.RunWorkerAsync();
                         port.ReadTimeout = -1;

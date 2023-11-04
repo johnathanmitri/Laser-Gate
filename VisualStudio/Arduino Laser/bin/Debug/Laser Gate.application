@@ -11,17 +11,17 @@
     <deploymentProvider codebase="file://johnathans-pc/Sharedfolder/Projects/ArduinoLaser/Laser%20Gate.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Laser Gate.exe.manifest" size="8089">
+    <dependentAssembly dependencyType="install" codebase="Laser Gate.exe.manifest" size="6134">
       <assemblyIdentity name="Laser Gate.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Ad+thZessDKYu0v7K9EAFaSay4E=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>e0/EbtQo7PX/qQUxiuM+wzIFP1PVEj+Nf7SPbDOK9lc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
